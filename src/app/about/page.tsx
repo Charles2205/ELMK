@@ -26,28 +26,42 @@ export const metadata: Metadata = pageMetadata({
 
 const team = [
   {
-    name: "Aarav Sharma",
-    role: "CEO",
+    name: "Pamela Bartar",
+    role: "Senior Researcher / Manager",
     description:
-      "Directs youth research placements, building real-world skills and confidence.",
+      "Focus on New European Bauhaus, co-creation, citizen science, and SciArt. Based in Vienna, Austria.",
   },
   {
-    name: "Mateo García",
-    role: "CTO",
-    description:
-      "Guides mobility programs connecting local youth with regional, national, and global learning opportunities.",
+    name: "Michaela Bruckmayer, PhD",
+    role: "Senior Researcher & Project Manager",
+    description: "Based in Austria.",
   },
   {
-    name: "Zuri Ndlovu",
-    role: "Engineer",
-    description:
-      "Leads policy analysis, translating data into insights for schools, cities, and partners.",
+    name: "Sasa Jovicic",
+    role: "Software Developer",
+    description: "Software Developer at Anexia. Based in Vienna, Austria.",
   },
   {
-    name: "Leila Haddad",
-    role: "Designer",
+    name: "Dr. Charlotte Rungius",
+    role: "Science Policy & Diplomacy",
     description:
-      "Mentors student researchers, modeling inclusive leadership and ethical inquiry practices.",
+      "Focus on science policy, science advice, science diplomacy, and international affairs. Based in Innsbruck, Tyrol, Austria.",
+  },
+  {
+    name: "Utku B. Demir",
+    role: "Research Assistant",
+    description:
+      "Research Assistant at the Centre for Social Innovation. Based in Vienna, Austria.",
+  },
+  {
+    name: "Martina Lindorfer",
+    role: "Senior Researcher, Head of Department",
+    description: "Based in Austria.",
+  },
+  {
+    name: "Samire Gurgurovci",
+    role: "Researcher & Multimedia Artist",
+    description: "Based in Austria.",
   },
 ];
 

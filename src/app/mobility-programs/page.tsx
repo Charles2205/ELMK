@@ -104,19 +104,31 @@ export default function MobilityProgramsPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="International reference"
-            title="Erasmus+"
-            description="A look at one of the world's largest education and mobility programmes, referenced here as context for our own regional and international tracks."
+            title="EU mobility &amp; solidarity programmes"
+            description="A look at some of the world's largest education, mobility, and volunteering programmes, referenced here as context for our own regional and international tracks."
             align="center"
             className="mx-auto"
           />
           <Card className="mt-10">
-            <CardContent className="flex flex-col items-center gap-6 pt-6 sm:flex-row sm:items-start">
-              <img
-                src="/images/erasmus-plus-logo.svg"
-                alt="Erasmus+ programme logo"
-                className="h-16 w-auto shrink-0 sm:h-20"
-              />
-              <div className="space-y-4 text-sm text-pretty text-muted-foreground">
+            <CardContent className="pt-6">
+              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+                <img
+                  src="/images/erasmus-plus-logo.svg"
+                  alt="Erasmus+ programme logo"
+                  className="h-11 w-auto sm:h-14"
+                />
+                <img
+                  src="/images/european-solidarity-corps-logo.webp"
+                  alt="European Solidarity Corps logo"
+                  className="h-9 w-auto sm:h-11"
+                />
+                <img
+                  src="/images/oead-logo.svg"
+                  alt="OeAD logo"
+                  className="h-7 w-auto sm:h-9"
+                />
+              </div>
+              <div className="mt-10 space-y-4 border-t border-border pt-8 text-sm text-pretty text-muted-foreground">
                 <p>
                   Erasmus+ is the EU programme promoting education, vocational
                   training, youth, and sport. From 2021 to 2027, the European
@@ -130,10 +142,16 @@ export default function MobilityProgramsPage() {
                   youth, and sport.
                 </p>
                 <p>
-                  As the national agency for Erasmus+ in Austria, the OeAD is
-                  responsible for implementing the EU programme. The OeAD
-                  acts on behalf of the relevant Austrian ministries as well
-                  as the European Commission.
+                  The European Solidarity Corps is a companion EU programme
+                  that funds solidarity projects and voluntary placements for
+                  young people aged 18 to 30, supporting communities across
+                  Europe and neighboring regions.
+                </p>
+                <p>
+                  As the national agency for Erasmus+ and the European
+                  Solidarity Corps in Austria, the OeAD is responsible for
+                  implementing both EU programmes on behalf of the relevant
+                  Austrian ministries and the European Commission.
                 </p>
               </div>
             </CardContent>
