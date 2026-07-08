@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Marketing/informational website for **Emerging Leaders of Kent Research & Mobility**, a youth-development nonprofit (Kent, WA). This is a from-scratch rebuild of a WordPress site (`larlok8892ed4d3db0-wzlxa.wordpress.com`) as a Next.js App Router app with Tailwind CSS v4 and shadcn/ui. There is no CMS or database — all copy lives directly in the page files, and the site is fully static (every route prerenders at build time).
+Marketing/informational website for **Loco Motion Foundation**, a youth-development research and public policy institute (Berryville, VA, founded 2015). This is a from-scratch rebuild of a WordPress site (`larlok8892ed4d3db0-wzlxa.wordpress.com`) as a Next.js App Router app with Tailwind CSS v4 and shadcn/ui. There is no CMS or database — all copy lives directly in the page files, and the site is fully static (every route prerenders at build time).
 
 ## Commands
 

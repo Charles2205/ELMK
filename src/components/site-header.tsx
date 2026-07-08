@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
@@ -25,9 +26,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur supports-backdrop-filter:bg-background/75">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5 font-heading font-bold tracking-tight">
-          <span className="flex size-8 items-center justify-center rounded-sm bg-primary font-mono text-xs font-bold text-primary-foreground">
-            EL
-          </span>
+          <Image
+            src="/images/loco-icon.png"
+            alt="Loco Motion Foundation"
+            width={46}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
           <span className="hidden text-sm leading-tight sm:block">
             {siteConfig.shortName}
           </span>

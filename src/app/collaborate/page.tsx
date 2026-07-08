@@ -7,12 +7,14 @@ import { ContactForm } from "@/components/contact-form";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { getLine } from "@/lib/lines";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Get Involved / Collaborate",
   description:
-    "Youth, educators, and partners can connect, collaborate, and support emerging leaders in Kent, Washington.",
-};
+    "Youth, educators, and partners can connect, collaborate, and support emerging leaders in Berryville, Virginia.",
+  path: "/collaborate",
+});
 
 const audiences = [
   {
@@ -47,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-      "The mobility program pushed me outside Kent and outside my comfort zone — I came back with skills and confidence I still use.",
+      "The mobility program pushed me outside Berryville and outside my comfort zone — I came back with skills and confidence I still use.",
     name: "Hope D.",
     role: "Mobility Program Alum",
   },
@@ -67,7 +69,7 @@ export default function CollaboratePage() {
       <PageHero
         line={interchange}
         title="Connect, collaborate, and support emerging leaders"
-        description="Youth, educators, and partners all have a role to play in growing the next generation of research-driven leaders in Kent — this is the interchange where every line meets."
+        description="Youth, educators, and partners all have a role to play in growing the next generation of research-driven leaders in Berryville — this is the interchange where every line meets."
         photo={{
           src: "/images/collaborate-boardroom.png",
           alt: "Two laptops showing program dashboards on a boardroom table, with a city view and printed route maps",

@@ -40,7 +40,7 @@ function NewsletterForm() {
         <DialogTitle className="text-2xl">Stay in the loop</DialogTitle>
         <DialogDescription>
           Get occasional updates on new research placements, mobility programs, and
-          events in Kent.
+          events in Berryville.
         </DialogDescription>
       </DialogHeader>
 

@@ -7,20 +7,22 @@ import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getLine } from "@/lib/lines";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mobility Programs",
   description:
-    "Research-focused exchange opportunities connecting young people with research sites, mentors, and communities beyond Kent.",
-};
+    "Research-focused exchange opportunities connecting young people with research sites, mentors, and communities beyond Berryville — plus context on international frameworks like Erasmus+.",
+  path: "/mobility-programs",
+});
 
 const tracks = [
   {
     icon: MapPin,
     badge: "Local Track",
-    title: "Kent-area placements",
+    title: "Berryville-area placements",
     description:
-      "Kent-area youth participate in part-time research positions paired with weekly leadership seminars and mentoring support.",
+      "Berryville-area youth participate in part-time research positions paired with weekly leadership seminars and mentoring support.",
     features: [
       "Part-time research placements",
       "Weekly leadership seminars",
@@ -30,7 +32,7 @@ const tracks = [
   {
     icon: Globe2,
     badge: "Regional & International Track",
-    title: "Beyond Kent",
+    title: "Beyond Berryville",
     description:
       "Short-term research residencies, cross-cultural workshops, and virtual collaboration with partner organizations.",
     features: [
@@ -48,8 +50,8 @@ export default function MobilityProgramsPage() {
     <>
       <PageHero
         line={mobility}
-        title="Research experiences that go beyond Kent"
-        description="We connect young people with research sites, mentors, and communities beyond Kent — combining structured placements, cultural immersion, and leadership coaching."
+        title="Research experiences that go beyond Berryville"
+        description="We connect young people with research sites, mentors, and communities beyond Berryville — combining structured placements, cultural immersion, and leadership coaching."
         photo={{
           src: "/images/mobility-dashboard-transit.png",
           alt: "A laptop showing a transit route dashboard, with a real bus stop visible through the window behind it",
@@ -95,6 +97,47 @@ export default function MobilityProgramsPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="International reference"
+            title="Erasmus+"
+            description="A look at one of the world's largest education and mobility programmes, referenced here as context for our own regional and international tracks."
+            align="center"
+            className="mx-auto"
+          />
+          <Card className="mt-10">
+            <CardContent className="flex flex-col items-center gap-6 pt-6 sm:flex-row sm:items-start">
+              <img
+                src="/images/erasmus-plus-logo.svg"
+                alt="Erasmus+ programme logo"
+                className="h-16 w-auto shrink-0 sm:h-20"
+              />
+              <div className="space-y-4 text-sm text-pretty text-muted-foreground">
+                <p>
+                  Erasmus+ is the EU programme promoting education, vocational
+                  training, youth, and sport. From 2021 to 2027, the European
+                  Union is providing &euro;28.4 billion for exchanges within
+                  Europe and internationally. Erasmus+ focuses on cross-border
+                  mobility for people of all ages, collaboration in European
+                  projects, and support for policy reforms. The programme
+                  funds mobility and cooperation projects in areas such as
+                  schools (including early childhood care), vocational
+                  education and training, higher education, adult education,
+                  youth, and sport.
+                </p>
+                <p>
+                  As the national agency for Erasmus+ in Austria, the OeAD is
+                  responsible for implementing the EU programme. The OeAD
+                  acts on behalf of the relevant Austrian ministries as well
+                  as the European Commission.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

@@ -9,12 +9,14 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { getLine } from "@/lib/lines";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Sponsors",
   description:
     "Fuel research placements and mobility programs that turn curious young people into confident community leaders.",
-};
+  path: "/sponsors",
+});
 
 const tiers = [
   {

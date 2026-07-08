@@ -7,14 +7,22 @@ import { SectionHeading } from "@/components/section-heading";
 import { TeamMemberCard } from "@/components/team-member-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import { siteConfig } from "@/lib/site";
 import { getLine } from "@/lib/lines";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
-    "Advancing youth leadership through hands-on research, mobility programs, and policy insight rooted in Kent, Washington communities.",
-};
+    "Loco Motion Foundation is a youth development research and public policy institute in Berryville, Virginia, founded in 2015, advancing youth leadership through hands-on research, mobility programs, and policy insight.",
+  path: "/about",
+});
 
 const team = [
   {
@@ -43,15 +51,62 @@ const team = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What is Loco Motion Foundation?",
+    answer:
+      "Loco Motion Foundation is a youth development research and public policy institute based in Berryville, Virginia, founded in 2015. We place young people in structured research positions and mobility programs that build leadership skills, professional confidence, and community impact.",
+  },
+  {
+    question: "Where is Loco Motion Foundation located?",
+    answer:
+      "Loco Motion Foundation is based in Berryville, Virginia, with research placements and mobility programs that extend across the surrounding region and internationally.",
+  },
+  {
+    question: "When was Loco Motion Foundation founded?",
+    answer: "Loco Motion Foundation was founded in 2015.",
+  },
+  {
+    question: "Who can participate in Loco Motion Foundation's programs?",
+    answer:
+      "Youth researchers, educators and schools, and community partners or sponsors can all get involved — through research placements, mobility programs, or partnership and sponsorship opportunities.",
+  },
+  {
+    question:
+      "What's the difference between Research Projects and Mobility Programs?",
+    answer:
+      "Research Projects are mentored, placement-based studies in youth development, education policy, community health, and civic leadership. Mobility Programs pair those placements with local, regional, and international mobility experiences.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function AboutPage() {
   const depot = getLine("depot");
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <PageHero
         line={depot}
         title="Advancing youth leadership through hands-on research"
-        description="Research, mobility programs, and policy insight rooted in Kent, Washington communities."
+        description="Research, mobility programs, and policy insight rooted in Berryville, Virginia communities."
         photo={{
           src: "/images/about-research-archive.png",
           alt: "A research archive room with labeled boxes, binders, and a route map on the table",
@@ -65,7 +120,7 @@ export default function AboutPage() {
           <CardContent className="pt-6">
             <p className="text-pretty text-center font-heading text-xl leading-relaxed text-foreground sm:text-2xl">
               &ldquo;Advancing youth leadership through hands-on research,
-              mobility programs, and policy insight rooted in Kent, Washington
+              mobility programs, and policy insight rooted in Berryville, Virginia
               communities.&rdquo;
             </p>
           </CardContent>
@@ -73,6 +128,8 @@ export default function AboutPage() {
 
         <div className="mt-12 space-y-4 text-pretty text-center text-muted-foreground">
           <p>
+            Loco Motion Foundation is a youth development research and public
+            policy institute based in Berryville, Virginia, founded in 2015.
             We connect young people with structured research placements and
             mobility experiences that grow leadership, curiosity, and civic
             responsibility. By partnering with educators and sponsors, we
@@ -99,7 +156,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="FAQ"
+          title="Frequently asked questions"
+          align="center"
+          className="mx-auto"
+        />
+        <Accordion className="mt-10">
+          {faqs.map((faq) => (
+            <AccordionItem key={faq.question} value={faq.question}>
+              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionContent>
+                <p>{faq.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
+
+      <section className="mx-auto max-w-6xl border-t border-border px-4 py-20 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
             Follow along and get involved

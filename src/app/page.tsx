@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, FlaskConical, Route, Users, Landmark, CalendarDays } from "lucide-react";
@@ -7,6 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/section-heading";
 import { RouteLine } from "@/components/route-line";
 import { getLine } from "@/lib/lines";
+import { siteConfig } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  description: siteConfig.description,
+  path: "/",
+});
 
 export default function Home() {
   const research = getLine("research");
@@ -18,15 +26,15 @@ export default function Home() {
       <section className="grid lg:grid-cols-2">
         <div className="flex flex-col justify-center bg-[var(--line-research)] px-6 py-16 text-[var(--line-research-foreground)] sm:px-10 sm:py-20 lg:px-16 lg:py-0">
           <p className="font-mono text-xs tracking-wider text-[var(--line-research-foreground)]/70 uppercase">
-            Kent, Washington
+            Berryville, Virginia
           </p>
           <h1 className="mt-4 text-balance font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Research and mobility experiences for emerging youth leaders
           </h1>
           <p className="mt-6 max-w-lg text-pretty text-lg text-[var(--line-research-foreground)]/85">
             We connect young people with real research placements and mobility
-            programs that build skills, confidence, and civic impact across Kent,
-            Washington.
+            programs that build skills, confidence, and civic impact across
+            Berryville, Virginia, and the surrounding region.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button size="lg" render={<Link href="/collaborate" />}>
@@ -45,7 +53,7 @@ export default function Home() {
         <div className="relative min-h-[320px] lg:min-h-[640px]">
           <Image
             src="/images/home-transit-corridor.png"
-            alt="A bus and bike racks along a Kent transit corridor, with field research clipboards in the foreground"
+            alt="A bus and bike racks along a transit corridor, with field research clipboards in the foreground"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -197,7 +205,7 @@ export default function Home() {
           </h2>
           <p className="max-w-xl text-pretty text-primary-foreground/80">
             Whether you&apos;re a student, educator, or partner organization —
-            there&apos;s a place for you at Emerging Leaders of Kent.
+            there&apos;s a place for you at Loco Motion Foundation.
           </p>
           <Button size="lg" variant="secondary" render={<Link href="/collaborate" />}>
             Get involved <ArrowRight className="size-4" />

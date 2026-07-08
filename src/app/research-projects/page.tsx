@@ -17,12 +17,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { getLine } from "@/lib/lines";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Research Projects",
   description:
     "Browse current and past youth-led studies, with clear pathways to apply or request collaboration.",
-};
+  path: "/research-projects",
+});
 
 const focusAreas = [
   { icon: Users2, label: "Youth development" },

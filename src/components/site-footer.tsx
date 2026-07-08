@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { siteConfig } from "@/lib/site";
 import { Separator } from "@/components/ui/separator";
@@ -11,9 +12,13 @@ export function SiteFooter() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xs space-y-3">
             <div className="flex items-center gap-2.5 font-heading font-bold tracking-tight">
-              <span className="flex size-8 items-center justify-center rounded-sm bg-primary font-mono text-xs font-bold text-primary-foreground">
-                EL
-              </span>
+              <Image
+                src="/images/loco-icon.png"
+                alt=""
+                width={46}
+                height={32}
+                className="h-8 w-auto"
+              />
               <span className="text-sm">{siteConfig.shortName}</span>
             </div>
             <p className="text-sm text-muted-foreground">{siteConfig.description}</p>

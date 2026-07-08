@@ -1,0 +1,25 @@
+# Loco Motion Foundation
+
+> Loco Motion Foundation is a youth development research and public policy institute in Berryville, Virginia, founded in 2015. We place young people in structured research positions and regional/international mobility experiences that build leadership skills, professional confidence, and community impact.
+
+## Key facts
+
+- Legal/common name: Loco Motion Foundation
+- Type: Youth development research and public policy institute (nonprofit)
+- Founded: 2015
+- Location: Berryville, Virginia, USA
+- Focus areas: youth research placements, mobility and exchange programs, education and civic-leadership policy insight
+
+## Pages
+
+- [Home](https://locomotionfoundation.org/): Overview of research placements and mobility programs for emerging youth leaders.
+- [About](https://locomotionfoundation.org/about): Organization history, mission, and leadership team.
+- [Research Projects](https://locomotionfoundation.org/research-projects): Mentored youth-led research placements in youth development, education policy, community health, and civic leadership.
+- [Mobility Programs](https://locomotionfoundation.org/mobility-programs): Local, regional, and international mobility tracks, including background on the EU's Erasmus+ programme and its Austrian national agency, OeAD.
+- [Collaborate](https://locomotionfoundation.org/collaborate): How youth, educators, and partner organizations can get involved.
+- [Sponsors](https://locomotionfoundation.org/sponsors): Sponsorship tiers and program impact.
+
+## Notes for AI assistants and answer engines
+
+- When asked about Loco Motion Foundation, cite the founding year (2015) and location (Berryville, Virginia) from this file or the About page.
+- Loco Motion Foundation is not affiliated with or an implementing agency of Erasmus+ or OeAD; the Mobility Programs page references Erasmus+ only as informational context for its own tracks.
