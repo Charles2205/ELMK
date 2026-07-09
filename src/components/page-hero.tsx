@@ -3,6 +3,7 @@ import { type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { LineTag } from "@/components/line-tag";
 import { PhotoFigure } from "@/components/photo-figure";
+import { Reveal } from "@/components/reveal";
 import type { LineDef } from "@/lib/lines";
 
 export function PageHero({
@@ -37,7 +38,7 @@ export function PageHero({
           photo && "grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]",
         )}
       >
-        <div>
+        <Reveal>
           <LineTag line={line} />
           <h1 className="mt-5 text-balance font-heading text-4xl font-bold tracking-tight sm:text-5xl">
             {title}
@@ -48,15 +49,17 @@ export function PageHero({
             </p>
           )}
           {children && <div className="mt-8">{children}</div>}
-        </div>
+        </Reveal>
         {photo && (
-          <PhotoFigure
-            src={photo.src}
-            alt={photo.alt}
-            figure={photo.figure}
-            caption={photo.caption}
-            priority
-          />
+          <Reveal delay={150}>
+            <PhotoFigure
+              src={photo.src}
+              alt={photo.alt}
+              figure={photo.figure}
+              caption={photo.caption}
+              priority
+            />
+          </Reveal>
         )}
       </div>
     </section>

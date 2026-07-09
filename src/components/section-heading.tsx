@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { LineTag } from "@/components/line-tag";
+import { Reveal } from "@/components/reveal";
 import type { LineDef } from "@/lib/lines";
 
 export function SectionHeading({
@@ -18,7 +19,7 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div
+    <Reveal
       className={cn(
         "max-w-2xl",
         align === "center" && "mx-auto text-center",
@@ -43,6 +44,6 @@ export function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   );
 }

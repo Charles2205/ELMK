@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/section-heading";
 import { RouteLine } from "@/components/route-line";
+import { Reveal } from "@/components/reveal";
 import { getLine } from "@/lib/lines";
 import { siteConfig } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
@@ -24,7 +25,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="grid lg:grid-cols-2">
-        <div className="flex flex-col justify-center bg-[var(--line-research)] px-6 py-16 text-[var(--line-research-foreground)] sm:px-10 sm:py-20 lg:px-16 lg:py-0">
+        <Reveal className="flex flex-col justify-center bg-[var(--line-research)] px-6 py-16 text-[var(--line-research-foreground)] sm:px-10 sm:py-20 lg:px-16 lg:py-0">
           <p className="font-mono text-xs tracking-wider text-[var(--line-research-foreground)]/70 uppercase">
             Berryville, Virginia
           </p>
@@ -49,8 +50,8 @@ export default function Home() {
               About programs
             </Button>
           </div>
-        </div>
-        <div className="relative min-h-[320px] lg:min-h-[640px]">
+        </Reveal>
+        <Reveal delay={150} className="relative min-h-[320px] lg:min-h-[640px]">
           <Image
             src="/images/home-transit-corridor.png"
             alt="A bus and bike racks along a transit corridor, with field research clipboards in the foreground"
@@ -59,7 +60,7 @@ export default function Home() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </Reveal>
       </section>
 
       {/* Signature: the throughline */}
@@ -91,7 +92,7 @@ export default function Home() {
             title="Advancing youth leadership through hands-on research"
             description="We design structured youth research placements, leadership labs, and regional mobility experiences that align with school goals and community priorities — turning curiosity into confidence and civic impact."
           />
-          <div className="grid grid-cols-2 gap-4">
+          <Reveal delay={150} className="grid grid-cols-2 gap-4">
             {[
               { icon: FlaskConical, label: "Research placements" },
               { icon: Route, label: "Mobility programs" },
@@ -107,7 +108,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </Reveal>
         </div>
         <div className="mt-8">
           <Button variant="link" className="px-0" render={<Link href="/about" />}>
@@ -126,7 +127,7 @@ export default function Home() {
             align="center"
             className="mx-auto"
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <Reveal className="mt-12 grid gap-6 sm:grid-cols-2">
             <Card className="border-t-[3px]" style={{ borderTopColor: research.colorVar as string }}>
               <CardContent className="flex h-full flex-col gap-4 pt-6">
                 <div className="flex size-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
@@ -171,35 +172,37 @@ export default function Home() {
                 </Button>
               </CardContent>
             </Card>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Upcoming events */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <Card className="overflow-hidden">
-          <CardContent className="flex flex-col items-center gap-4 py-12 text-center">
-            <div className="flex size-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
-              <CalendarDays className="size-6" />
-            </div>
-            <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
-              Upcoming Events
-            </h2>
-            <p className="max-w-xl text-pretty text-muted-foreground">
-              Workshops, leadership labs, and info sessions are announced through
-              our newsletter and social channels. Get connected to hear about the
-              next opportunity to get involved.
-            </p>
-            <Button render={<Link href="/collaborate" />}>
-              Get connected <ArrowRight className="size-4" />
-            </Button>
-          </CardContent>
-        </Card>
+        <Reveal>
+          <Card className="overflow-hidden">
+            <CardContent className="flex flex-col items-center gap-4 py-12 text-center">
+              <div className="flex size-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
+                <CalendarDays className="size-6" />
+              </div>
+              <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+                Upcoming Events
+              </h2>
+              <p className="max-w-xl text-pretty text-muted-foreground">
+                Workshops, leadership labs, and info sessions are announced through
+                our newsletter and social channels. Get connected to hear about the
+                next opportunity to get involved.
+              </p>
+              <Button render={<Link href="/collaborate" />}>
+                Get connected <ArrowRight className="size-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </Reveal>
       </section>
 
       {/* Final CTA */}
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:px-8">
+        <Reveal className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="text-balance font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             Ready to build tomorrow&apos;s leaders today?
           </h2>
@@ -210,7 +213,7 @@ export default function Home() {
           <Button size="lg" variant="secondary" render={<Link href="/collaborate" />}>
             Get involved <ArrowRight className="size-4" />
           </Button>
-        </div>
+        </Reveal>
       </section>
     </>
   );

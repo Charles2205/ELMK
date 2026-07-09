@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/lib/site";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
@@ -130,15 +131,17 @@ export default function AboutPage() {
       />
 
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <Card className="border-l-4 border-l-primary bg-card">
-          <CardContent className="pt-6">
-            <p className="text-pretty text-center font-heading text-xl leading-relaxed text-foreground sm:text-2xl">
-              &ldquo;Advancing youth leadership through hands-on research,
-              mobility programs, and policy insight rooted in Berryville, Virginia
-              communities.&rdquo;
-            </p>
-          </CardContent>
-        </Card>
+        <Reveal>
+          <Card className="border-l-4 border-l-primary bg-card">
+            <CardContent className="pt-6">
+              <p className="text-pretty text-center font-heading text-xl leading-relaxed text-foreground sm:text-2xl">
+                &ldquo;Advancing youth leadership through hands-on research,
+                mobility programs, and policy insight rooted in Berryville, Virginia
+                communities.&rdquo;
+              </p>
+            </CardContent>
+          </Card>
+        </Reveal>
 
         <div className="mt-12 space-y-4 text-pretty text-center text-muted-foreground">
           <p>
@@ -162,11 +165,11 @@ export default function AboutPage() {
             align="center"
             className="mx-auto"
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (
               <TeamMemberCard key={member.name} {...member} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -177,20 +180,22 @@ export default function AboutPage() {
           align="center"
           className="mx-auto"
         />
-        <Accordion className="mt-10">
-          {faqs.map((faq) => (
-            <AccordionItem key={faq.question} value={faq.question}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>
-                <p>{faq.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Reveal delay={150}>
+          <Accordion className="mt-10">
+            {faqs.map((faq) => (
+              <AccordionItem key={faq.question} value={faq.question}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>
+                  <p>{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
       </section>
 
       <section className="mx-auto max-w-6xl border-t border-border px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-6 text-center">
+        <Reveal className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
             Follow along and get involved
           </h2>
@@ -221,7 +226,7 @@ export default function AboutPage() {
               FB
             </Button>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

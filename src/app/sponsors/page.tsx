@@ -5,8 +5,10 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { TestimonialCard } from "@/components/testimonial-card";
+import { PartnersLogos } from "@/components/partners-logos";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
@@ -104,7 +106,7 @@ export default function SponsorsPage() {
           align="center"
           className="mx-auto"
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
           {tiers.map((tier) => (
             <Card
               key={tier.name}
@@ -130,10 +132,25 @@ export default function SponsorsPage() {
               </CardContent>
             </Card>
           ))}
+        </Reveal>
+      </section>
+
+      <section className="border-y border-border">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Our partners"
+            title="Partners & sponsors"
+            description="Loco Motion Foundation's mobility tracks and programs are supported by these partner organizations."
+            align="center"
+            className="mx-auto"
+          />
+          <div className="mt-12">
+            <PartnersLogos />
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-border bg-card">
+      <section className="border-b border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Sponsor & student voices"
@@ -141,11 +158,11 @@ export default function SponsorsPage() {
             align="center"
             className="mx-auto"
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((testimonial, i) => (
               <TestimonialCard key={i} {...testimonial} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

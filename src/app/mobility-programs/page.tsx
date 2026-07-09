@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Reveal } from "@/components/reveal";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
 
@@ -66,7 +67,7 @@ export default function MobilityProgramsPage() {
           title="Choose your track"
           description="Two structured pathways, both built around mentorship and real research responsibility."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <Reveal className="mt-10 grid gap-6 sm:grid-cols-2">
           {tracks.map(({ icon: Icon, badge, title, description, features }) => (
             <Card
               key={title}
@@ -97,65 +98,69 @@ export default function MobilityProgramsPage() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="border-t border-border">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="International reference"
+            eyebrow="International partnership"
             title="EU mobility &amp; solidarity programmes"
-            description="A look at some of the world's largest education, mobility, and volunteering programmes, referenced here as context for our own regional and international tracks."
+            description="Our international mobility tracks are developed in partnership with OeAD, Austria's national agency for two of the world's largest education, mobility, and volunteering programmes."
             align="center"
             className="mx-auto"
           />
-          <Card className="mt-10">
-            <CardContent className="pt-6">
-              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-                <img
-                  src="/images/erasmus-plus-logo.svg"
-                  alt="Erasmus+ programme logo"
-                  className="h-11 w-auto sm:h-14"
-                />
-                <img
-                  src="/images/european-solidarity-corps-logo.webp"
-                  alt="European Solidarity Corps logo"
-                  className="h-9 w-auto sm:h-11"
-                />
-                <img
-                  src="/images/oead-logo.svg"
-                  alt="OeAD logo"
-                  className="h-7 w-auto sm:h-9"
-                />
-              </div>
-              <div className="mt-10 space-y-4 border-t border-border pt-8 text-sm text-pretty text-muted-foreground">
-                <p>
-                  Erasmus+ is the EU programme promoting education, vocational
-                  training, youth, and sport. From 2021 to 2027, the European
-                  Union is providing &euro;28.4 billion for exchanges within
-                  Europe and internationally. Erasmus+ focuses on cross-border
-                  mobility for people of all ages, collaboration in European
-                  projects, and support for policy reforms. The programme
-                  funds mobility and cooperation projects in areas such as
-                  schools (including early childhood care), vocational
-                  education and training, higher education, adult education,
-                  youth, and sport.
-                </p>
-                <p>
-                  The European Solidarity Corps is a companion EU programme
-                  that funds solidarity projects and voluntary placements for
-                  young people aged 18 to 30, supporting communities across
-                  Europe and neighboring regions.
-                </p>
-                <p>
-                  As the national agency for Erasmus+ and the European
-                  Solidarity Corps in Austria, the OeAD is responsible for
-                  implementing both EU programmes on behalf of the relevant
-                  Austrian ministries and the European Commission.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <Reveal delay={150}>
+            <Card className="mt-10">
+              <CardContent className="pt-6">
+                <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+                  <img
+                    src="/images/erasmus-plus-logo.svg"
+                    alt="Erasmus+ programme logo"
+                    className="h-11 w-auto sm:h-14"
+                  />
+                  <img
+                    src="/images/european-solidarity-corps-logo.webp"
+                    alt="European Solidarity Corps logo"
+                    className="h-9 w-auto sm:h-11"
+                  />
+                  <img
+                    src="/images/oead-logo.svg"
+                    alt="OeAD logo"
+                    className="h-7 w-auto sm:h-9"
+                  />
+                </div>
+                <div className="mt-10 space-y-4 border-t border-border pt-8 text-sm text-pretty text-muted-foreground">
+                  <p>
+                    Erasmus+ is the EU programme promoting education, vocational
+                    training, youth, and sport. From 2021 to 2027, the European
+                    Union is providing &euro;28.4 billion for exchanges within
+                    Europe and internationally. Erasmus+ focuses on cross-border
+                    mobility for people of all ages, collaboration in European
+                    projects, and support for policy reforms. The programme
+                    funds mobility and cooperation projects in areas such as
+                    schools (including early childhood care), vocational
+                    education and training, higher education, adult education,
+                    youth, and sport.
+                  </p>
+                  <p>
+                    The European Solidarity Corps is a companion EU programme
+                    that funds solidarity projects and voluntary placements for
+                    young people aged 18 to 30, supporting communities across
+                    Europe and neighboring regions.
+                  </p>
+                  <p>
+                    As the national agency for Erasmus+ and the European
+                    Solidarity Corps in Austria, the OeAD is responsible for
+                    implementing both EU programmes on behalf of the relevant
+                    Austrian ministries and the European Commission. Loco
+                    Motion Foundation partners with the OeAD to align its own
+                    international mobility tracks with these frameworks.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </Reveal>
         </div>
       </section>
 

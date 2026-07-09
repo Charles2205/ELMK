@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { Card, CardContent } from "@/components/ui/card";
+import { Reveal } from "@/components/reveal";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
 
@@ -85,7 +86,7 @@ export default function CollaboratePage() {
           align="center"
           className="mx-auto"
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
           {audiences.map(({ icon: Icon, title, description }) => (
             <Card key={title}>
               <CardContent className="flex flex-col items-center gap-3 pt-6 text-center">
@@ -99,7 +100,7 @@ export default function CollaboratePage() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="border-y border-border bg-card">
@@ -110,11 +111,11 @@ export default function CollaboratePage() {
             align="center"
             className="mx-auto"
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((testimonial, i) => (
               <TestimonialCard key={i} {...testimonial} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

@@ -16,6 +16,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { Reveal } from "@/components/reveal";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
 
@@ -101,7 +102,7 @@ export default function ResearchProjectsPage() {
           title="Mentored research placements"
           description="Contribute to data gathering and presentation activities alongside colleagues and academic partners — choose the format that fits your schedule."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
           {placementLengths.map((item) => (
             <Card key={item.title} className="border-t-[3px]" style={{ borderTopColor: research.colorVar as string }}>
               <CardContent className="pt-6">
@@ -112,7 +113,7 @@ export default function ResearchProjectsPage() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="border-y border-border bg-card">
@@ -122,7 +123,7 @@ export default function ResearchProjectsPage() {
             title="Review outcomes, then go deeper"
             description="Review concise impact summaries, methods overviews, and key findings for each project — then request the full brief for classroom, community, or funding use."
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
             {resources.map(({ icon: Icon, title, description }) => (
               <Card key={title}>
                 <CardContent className="pt-6">
@@ -136,12 +137,12 @@ export default function ResearchProjectsPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-6 text-center">
+        <Reveal className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
             Ready to apply or collaborate?
           </h2>
@@ -152,7 +153,7 @@ export default function ResearchProjectsPage() {
           <Button size="lg" render={<Link href="/collaborate" />}>
             Apply or request a brief <ArrowRight className="size-4" />
           </Button>
-        </div>
+        </Reveal>
       </section>
     </>
   );
