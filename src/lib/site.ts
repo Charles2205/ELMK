@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Loco Motion Foundation",
   tagline: "Developing tomorrow's research-driven leaders",
   description:
-    "A youth development nonprofit placing young people in structured research positions and regional mobility experiences that build leadership skills, professional confidence, and community impact in Berryville, Virginia.",
+    "Youth development nonprofit in Berryville, Virginia offering structured research placements and mobility programs that build leadership and civic impact.",
   location: "Berryville, Virginia",
   url: "https://locomotionfoundation.org",
   founded: "2015",

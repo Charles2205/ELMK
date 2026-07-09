@@ -63,20 +63,44 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  name: siteConfig.name,
-  url: siteConfig.url,
-  description: siteConfig.description,
-  foundingDate: siteConfig.founded,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Berryville",
-    addressRegion: "VA",
-    addressCountry: "US",
-  },
-};
+function OrganizationSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/images/loco-icon.png`,
+    description: siteConfig.description,
+    foundingDate: siteConfig.founded,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Berryville",
+      addressRegion: "VA",
+      addressCountry: "US",
+    },
+    areaServed: "Berryville, Virginia and surrounding region",
+    knowsAbout: [
+      "youth development",
+      "research placements",
+      "mobility programs",
+      "youth leadership",
+    ],
+    sameAs: [
+      // add real profile URLs when live:
+      // "https://www.instagram.com/...",
+      // "https://www.facebook.com/...",
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}
 
 export default function RootLayout({
   children,
@@ -89,12 +113,7 @@ export default function RootLayout({
       className={`${overpass.variable} ${newsreader.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <OrganizationSchema />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
