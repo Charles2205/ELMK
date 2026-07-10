@@ -4,6 +4,7 @@ import { MapPin, Globe2, Check } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
+import { EmailLink } from "@/components/email-link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/reveal";
@@ -179,6 +180,10 @@ export default function MobilityProgramsPage() {
               submitLabel="Submit inquiry"
               messagePlaceholder="Tell us which track interests you and a bit about your background..."
             />
+            <div className="mt-6 flex flex-col items-center gap-2 text-sm text-muted-foreground">
+              <span>Or email us directly</span>
+              <EmailLink email="Mobility@locomotionfoundation.org" />
+            </div>
           </div>
         </div>
       </section>

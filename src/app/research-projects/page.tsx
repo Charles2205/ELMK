@@ -13,6 +13,7 @@ import {
 
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
+import { EmailLink } from "@/components/email-link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -153,6 +154,10 @@ export default function ResearchProjectsPage() {
           <Button size="lg" render={<Link href="/collaborate" />}>
             Apply or request a brief <ArrowRight className="size-4" />
           </Button>
+          <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
+            <span>Or email us directly</span>
+            <EmailLink email="Research@locomotionfoundation.org" />
+          </div>
         </Reveal>
       </section>
     </>

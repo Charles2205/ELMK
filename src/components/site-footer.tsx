@@ -4,6 +4,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 import { Separator } from "@/components/ui/separator";
 import { SystemMapLegend } from "@/components/system-map-legend";
+import { EmailLink } from "@/components/email-link";
 
 export function SiteFooter() {
   return (
@@ -54,9 +55,10 @@ export function SiteFooter() {
               Get in touch
             </h3>
             <p className="mt-4 text-sm text-muted-foreground">{siteConfig.location}</p>
+            <EmailLink email="info@locomotionfoundation.org" className="mt-3" />
             <Link
               href="/collaborate"
-              className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+              className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
             >
               Contact us &rarr;
             </Link>

@@ -1,6 +1,9 @@
 "use server";
 
+import { Resend } from "resend";
 import { z } from "zod";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name."),
@@ -41,8 +44,23 @@ export async function submitContactForm(
     };
   }
 
-  // Submission is logged server-side; wire up an email/CRM integration here when ready.
-  console.log("New inquiry received", parsed.data);
+  try {
+    await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL!,
+      to: process.env.CONTACT_TO_EMAIL!,
+      subject: parsed.data.context
+        ? `New inquiry (${parsed.data.context}) from ${parsed.data.name}`
+        : `New inquiry from ${parsed.data.name}`,
+      replyTo: parsed.data.email,
+      text: `Name: ${parsed.data.name}\nEmail: ${parsed.data.email}\nContext: ${parsed.data.context ?? "n/a"}\n\n${parsed.data.message}`,
+    });
+  } catch (error) {
+    console.error("Failed to send contact form notification", error);
+    return {
+      status: "error",
+      message: "Something went wrong sending your message. Please try again.",
+    };
+  }
 
   return {
     status: "success",
@@ -76,8 +94,21 @@ export async function subscribeNewsletter(
     };
   }
 
-  // Subscription is logged server-side; wire up an email list provider here when ready.
-  console.log("New newsletter signup", parsed.data);
+  try {
+    await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL!,
+      to: process.env.CONTACT_TO_EMAIL!,
+      subject: "New newsletter signup",
+      replyTo: parsed.data.email,
+      text: `New newsletter signup: ${parsed.data.email}`,
+    });
+  } catch (error) {
+    console.error("Failed to send newsletter signup notification", error);
+    return {
+      status: "error",
+      message: "Something went wrong subscribing you. Please try again.",
+    };
+  }
 
   return {
     status: "success",

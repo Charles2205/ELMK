@@ -1,14 +1,17 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import { EmailLink } from "@/components/email-link";
 
 export function TeamMemberCard({
   name,
   role,
   description,
+  email,
 }: {
   name: string;
   role: string;
   description: string;
+  email?: string;
 }) {
   const initials = name
     .split(" ")
@@ -29,6 +32,9 @@ export function TeamMemberCard({
           <p className="text-sm text-primary">{role}</p>
         </div>
         <p className="text-pretty text-sm text-muted-foreground">{description}</p>
+        {email && (
+          <EmailLink email={email} className="mt-auto w-full justify-center text-center" />
+        )}
       </CardContent>
     </Card>
   );

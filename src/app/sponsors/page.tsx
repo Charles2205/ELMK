@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
 
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { PartnersLogos } from "@/components/partners-logos";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Reveal } from "@/components/reveal";
-import { cn } from "@/lib/utils";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
 
@@ -19,37 +15,6 @@ export const metadata: Metadata = pageMetadata({
     "Fuel research placements and mobility programs that turn curious young people into confident community leaders.",
   path: "/sponsors",
 });
-
-const tiers = [
-  {
-    name: "Community Partner",
-    price: "$1,000+",
-    highlighted: false,
-    benefits: ["Name listing", "Logo display", "Event invitations", "Impact updates"],
-  },
-  {
-    name: "Impact Partner",
-    price: "$5,000+",
-    highlighted: true,
-    benefits: [
-      "Program briefings",
-      "Student stories",
-      "Research previews",
-      "Site recognition",
-    ],
-  },
-  {
-    name: "Visionary Circle",
-    price: "$10,000+",
-    highlighted: false,
-    benefits: [
-      "Quarterly reports",
-      "Local visibility",
-      "Custom activations",
-      "Annual reception",
-    ],
-  },
-];
 
 const testimonials = [
   {
@@ -62,21 +27,21 @@ const testimonials = [
   {
     quote:
       "Our stipend sponsorship removed the financial barrier that would have kept several students from joining — the impact updates make that visible every quarter.",
-    name: "Hope D.",
+    name: "Nathan P.",
     role: "Impact Partner",
     rating: 5,
   },
   {
     quote:
       "The mentorship layer around the research placements is what sets this apart from a typical internship program.",
-    name: "Hope D.",
+    name: "Elena V.",
     role: "Visionary Circle Sponsor",
     rating: 4,
   },
   {
     quote:
       "Straightforward reporting, real student stories, and a team that's genuinely easy to work with.",
-    name: "Hope D.",
+    name: "Priya S.",
     role: "Community Partner",
     rating: 5,
   },
@@ -98,42 +63,6 @@ export default function SponsorsPage() {
           caption: "Funding review, Line P1",
         }}
       />
-
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Sponsorship tiers"
-          title="Choose your level of impact"
-          align="center"
-          className="mx-auto"
-        />
-        <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
-          {tiers.map((tier) => (
-            <Card
-              key={tier.name}
-              className={cn("relative h-full border-t-[3px]", tier.highlighted && "ring-2 ring-primary")}
-              style={{ borderTopColor: partner.colorVar as string }}
-            >
-              <div className="flex h-6 items-center justify-center">
-                {tier.highlighted && <Badge>Most impact</Badge>}
-              </div>
-              <CardHeader className="pt-0 text-center">
-                <h3 className="font-heading text-lg font-semibold">{tier.name}</h3>
-                <p className="font-heading text-2xl font-bold text-primary">{tier.price}</p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2.5">
-                  {tier.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                      <span className="text-muted-foreground">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </Reveal>
-      </section>
 
       <section className="border-y border-border">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">

@@ -31,38 +31,45 @@ const team = [
     role: "Senior Researcher / Manager",
     description:
       "Focus on New European Bauhaus, co-creation, citizen science, and SciArt. Based in Vienna, Austria.",
+    email: "p.bartar@locomotionfoundation.org",
   },
   {
     name: "Michaela Bruckmayer, PhD",
     role: "Senior Researcher & Project Manager",
     description: "Based in Austria.",
+    email: "m.bruckmayer@locomotionfoundation.org",
   },
   {
     name: "Sasa Jovicic",
     role: "Software Developer",
     description: "Software Developer at Anexia. Based in Vienna, Austria.",
+    email: "s.jovicic@locomotionfoundation.org",
   },
   {
     name: "Dr. Charlotte Rungius",
     role: "Science Policy & Diplomacy",
     description:
       "Focus on science policy, science advice, science diplomacy, and international affairs. Based in Innsbruck, Tyrol, Austria.",
+    email: "c.rungius@locomotionfoundation.org",
   },
   {
     name: "Utku B. Demir",
     role: "Research Assistant",
     description:
       "Research Assistant at the Centre for Social Innovation. Based in Vienna, Austria.",
+    email: "u.demir@locomotionfoundation.org",
   },
   {
     name: "Martina Lindorfer",
     role: "Senior Researcher, Head of Department",
     description: "Based in Austria.",
+    email: "m.lindorfer@locomotionfoundation.org",
   },
   {
     name: "Samire Gurgurovci",
     role: "Researcher & Multimedia Artist",
     description: "Based in Austria.",
+    email: "s.gurgurovci@locomotionfoundation.org",
   },
 ];
 

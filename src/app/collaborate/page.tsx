@@ -45,19 +45,19 @@ const testimonials = [
   {
     quote:
       "Partnering with this program brought our students structured, credible research experience we couldn't have built on our own.",
-    name: "Hope D.",
+    name: "Marcus T.",
     role: "School Partner",
   },
   {
     quote:
       "The mobility program pushed me outside Berryville and outside my comfort zone — I came back with skills and confidence I still use.",
-    name: "Hope D.",
+    name: "Ava R.",
     role: "Mobility Program Alum",
   },
   {
     quote:
       "Collaborating on a project with their student researchers was seamless, professional, and genuinely useful to our work.",
-    name: "Hope D.",
+    name: "Daniel K.",
     role: "Project Collaborator",
   },
 ];
