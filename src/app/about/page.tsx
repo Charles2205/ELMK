@@ -14,6 +14,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Reveal } from "@/components/reveal";
+import { InstagramIcon, FacebookIcon } from "@/components/social-icons";
 import { siteConfig } from "@/lib/site";
 import { getLine } from "@/lib/lines";
 import { pageMetadata } from "@/lib/seo";
@@ -130,10 +131,10 @@ export default function AboutPage() {
         title="Advancing youth leadership through hands-on research"
         description="Research, mobility programs, and policy insight rooted in Berryville, Virginia communities."
         photo={{
-          src: "/images/about-research-archive.png",
-          alt: "A research archive room with labeled boxes, binders, and a route map on the table",
+          src: "/images/about-us.jpg",
+          alt: "Program staff presenting a research schedule to a room of participants during a team briefing",
           figure: "02",
-          caption: "Program archive, HQ",
+          caption: "Team briefing, HQ",
         }}
       />
 
@@ -218,19 +219,17 @@ export default function AboutPage() {
               variant="outline"
               size="icon"
               aria-label="Instagram"
-              className="text-xs font-semibold"
               render={<a href={siteConfig.social.instagram} />}
             >
-              IG
+              <InstagramIcon className="size-4" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               aria-label="Facebook"
-              className="text-xs font-semibold"
               render={<a href={siteConfig.social.facebook} />}
             >
-              FB
+              <FacebookIcon className="size-4" />
             </Button>
           </div>
         </Reveal>

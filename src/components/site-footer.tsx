@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 import { Separator } from "@/components/ui/separator";
 import { SystemMapLegend } from "@/components/system-map-legend";
 import { EmailLink } from "@/components/email-link";
+import { InstagramIcon, FacebookIcon } from "@/components/social-icons";
 
 export function SiteFooter() {
   return (
@@ -27,16 +28,16 @@ export function SiteFooter() {
               <a
                 href={siteConfig.social.instagram}
                 aria-label="Instagram"
-                className="flex size-9 items-center justify-center rounded-sm border border-border font-mono text-xs font-semibold text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="flex size-9 items-center justify-center rounded-sm border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
-                IG
+                <InstagramIcon className="size-4" />
               </a>
               <a
                 href={siteConfig.social.facebook}
                 aria-label="Facebook"
-                className="flex size-9 items-center justify-center rounded-sm border border-border font-mono text-xs font-semibold text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="flex size-9 items-center justify-center rounded-sm border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
-                FB
+                <FacebookIcon className="size-4" />
               </a>
             </div>
           </div>

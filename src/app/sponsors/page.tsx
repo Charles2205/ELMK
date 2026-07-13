@@ -57,10 +57,10 @@ export default function SponsorsPage() {
         title="Fuel research placements and mobility programs"
         description="Turn curious young people into confident community leaders. Sponsorships expand access to paid research placements and safe mobility — funding stipends, mentorship, travel, and data tools for developing youth policy solutions."
         photo={{
-          src: "/images/sponsors-boardroom-daylight.png",
-          alt: "A sunlit boardroom table with two laptops showing program dashboards and printed route maps",
+          src: "/images/sponsors.jpg",
+          alt: "A group of young participants in conversation with a program staff member during an outdoor event",
           figure: "06",
-          caption: "Funding review, Line P1",
+          caption: "Sponsor meet-and-greet, Line P1",
         }}
       />
 

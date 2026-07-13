@@ -55,10 +55,10 @@ export default function MobilityProgramsPage() {
         title="Research experiences that go beyond Berryville"
         description="We connect young people with research sites, mentors, and communities beyond Berryville — combining structured placements, cultural immersion, and leadership coaching."
         photo={{
-          src: "/images/mobility-dashboard-transit.png",
-          alt: "A laptop showing a transit route dashboard, with a real bus stop visible through the window behind it",
+          src: "/images/mobility.jpg",
+          alt: "A student with a backpack recording notes on a clipboard while waiting at a bus stop",
           figure: "04",
-          caption: "Route dashboard, Line M1",
+          caption: "Field data collection, Line M1",
         }}
       />
 

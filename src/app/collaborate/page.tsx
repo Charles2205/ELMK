@@ -72,10 +72,10 @@ export default function CollaboratePage() {
         title="Connect, collaborate, and support emerging leaders"
         description="Youth, educators, and partners all have a role to play in growing the next generation of research-driven leaders in Berryville — this is the interchange where every line meets."
         photo={{
-          src: "/images/collaborate-boardroom.png",
-          alt: "Two laptops showing program dashboards on a boardroom table, with a city view and printed route maps",
+          src: "/images/get-connected.jpg",
+          alt: "Event flyer for the Loco Motion Foundation's Eco-Social Work Practices research visit to Vienna, Austria",
           figure: "05",
-          caption: "Partner planning session, Interchange",
+          caption: "Upcoming research visit, Vienna",
         }}
       />
 

@@ -95,8 +95,8 @@ export function NewsletterModal() {
       <DialogContent className="grid max-w-3xl gap-0 overflow-hidden p-0 sm:max-w-3xl sm:grid-cols-2">
         <div className="relative hidden sm:block">
           <Image
-            src="/images/collaborate-boardroom.png"
-            alt="Two laptops showing program dashboards on a boardroom table"
+            src="/images/sponsors.jpg"
+            alt="A group of young participants in conversation with a program staff member"
             fill
             className="object-cover"
             sizes="400px"
